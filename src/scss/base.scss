@@ -1,0 +1,121 @@
+/*
+@import "./_variables";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+*/
+$mdc-theme-primary: #01579B;
+$mdc-theme-secondary: #7bac69;
+$mdc-theme-on-primary: #ffffff;
+$mdc-theme-on-secondary: #fff;
+
+@import "../../node_modules/@material/textfield/mdc-text-field";
+@import "../../node_modules/@material/textfield/helper-text/mdc-text-field-helper-text";
+@import "../../node_modules/@material/button/mdc-button";
+@import "../../node_modules/@material/elevation/mdc-elevation";
+@import "../../node_modules/@material/drawer/mdc-drawer";
+@import "../../node_modules/@material/list/mdc-list";
+@import "../../node_modules/@material/layout-grid/mdc-layout-grid";
+@import "../../node_modules/@material/fab/mdc-fab";
+@import "../../node_modules/@material/chips/mdc-chips";
+@import "../../node_modules/@material/dialog/mdc-dialog";
+@import "../../node_modules/@material/top-app-bar/mdc-top-app-bar";
+@import "../../node_modules/@material/tab-bar/mdc-tab-bar";
+@import "../../node_modules/@material/tab-scroller/mdc-tab-scroller";
+@import "../../node_modules/@material/tab-indicator/mdc-tab-indicator";
+@import "../../node_modules/@material/tab/mdc-tab";
+@import "../../node_modules/@material/menu-surface/mdc-menu-surface";
+@import "../../node_modules/@material/menu/mdc-menu";
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.root {
+  overflow-x: hidden;
+}
+
+.content {
+  padding: 1%;
+  padding-top: 80px;
+}
+
+.highlight {
+  background-color: #f7f7f9;
+}
+
+.mdc-text-field {
+  width: 100%;
+}
+
+.mdc-button:not(.mdc-dialog__button) {
+  width: 100%;
+}
+
+#block_auth {
+  height: 100vh !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & > form {
+    width: 340px;
+    padding: 40px;
+    & > *:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+}
+
+.mdc-drawer-app-content {
+  padding: 30px;
+}
+
+.mdc-chip {
+  & > .mdc-chip__text {
+    pointer-events: none;
+  }
+}
+
+.add_group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & > *:not(:first-child) {
+    margin-left: 10px;
+  }
+  & > button {
+    min-width: 150px;
+  }
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.child-mt-20 {
+  & > .mdc-text-field:first-of-type {
+    margin-top: 5px;
+  }
+  & > .mdc-text-field:not(:first-of-type) {
+    margin-top: 20px;
+  }
+}
+
+.align-right {
+  text-align: right;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.d-none {
+  display: none;
+}

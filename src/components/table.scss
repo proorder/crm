@@ -1,0 +1,70 @@
+.table-constraint {
+  border-radius: 5px;
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  table-layout: fixed;
+  th {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #f3eef5;
+  }
+  tr {
+    &:not(:last-of-type) {
+      & > td {
+        border-bottom: 1px solid #f3eef5;
+      }
+    }
+    td {
+      padding: 10px 10px;
+      &.extra {
+        text-align: center;
+      }
+    }
+    &.with-child {
+      cursor: pointer;
+      &.opened-childs {
+        background-color: lighten(#7bac69, 30%);
+      }
+
+      &:hover:not(.opened-childs) {
+        background-color: lighten(#7bac69, 43%);
+      }
+      &.opened-childs > td {
+        border-bottom: none;
+      }
+    }
+    &.child {
+      display: none;
+      background-color: lighten(#7bac69, 40%);
+      & > td {
+        border-bottom: none !important;
+      }
+      @keyframes stretch {
+        from {
+          transform: translateX(-100px);
+        }
+        75% {
+          transform: translateX(20px);
+        }
+        90% {
+          transform: translateX(-10px);
+        }
+        to {
+          transform: translateX(0);
+        }
+      }
+      &.visible {
+        display: table-row;
+        animation: 300ms stretch linear;
+      }
+    }
+    .without-child {
+      border-bottom: none !important;
+    }
+  }
+}
